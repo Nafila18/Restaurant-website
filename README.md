@@ -21,6 +21,7 @@ https://nafila18.github.io/Restaurant-website/
 - Clean and modern UI
 
 #Purpose
+
 This project was created to practice frontend development concepts and improve my skills in responsive web design.
 
 #What I Learned
