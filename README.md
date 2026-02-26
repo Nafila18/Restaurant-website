@@ -1,10 +1,12 @@
 #Responsive Restaurant Website
 
 #Project Overview
+
 This is a responsive restaurant website developed using HTML, CSS.  
 The website showcases a modern restaurant layout with sections like Home, Menu, About, and Contact.
 
 #Live Demo
+
 https://nafila18.github.io/Restaurant-website/
 
 #Technologies Used
