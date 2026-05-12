@@ -262,6 +262,7 @@ body {
 }
 
 .menu-card {
+    position: relative;
     background: linear-gradient(135deg, #3d2415 0%, #2c1810 100%);
     border-radius: 12px;
     overflow: hidden;
@@ -337,7 +338,11 @@ body {
 }
 
 .order-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     width: calc(100% - 3rem);
+    max-width: 380px;
     margin: 1rem 1.5rem 1.5rem;
     padding: 0.8rem 1.5rem;
     background: linear-gradient(135deg, var(--accent-color) 0%, #a01830 100%);
@@ -689,27 +694,91 @@ body {
 }
 
 /* Responsive Design */
+@media (max-width: 1024px) {
+    .hero {
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+
+    .menu-items {
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+
+    .about {
+        gap: 2rem;
+    }
+
+    .contact-container,
+    .about-features {
+        gap: 2rem;
+    }
+}
+
 @media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 0 1.2rem;
+        gap: 1rem;
+    }
+
+    .nav-links {
+        gap: 1rem;
+        font-size: 0.95rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
     .hero {
         flex-direction: column;
-        padding: 2rem 1rem;
+        padding: 2.5rem 1.2rem;
         min-height: auto;
     }
 
+    .hero-content,
+    .hero-image,
+    .about-image,
+    .contact-form,
+    .contact-info,
+    .about-features {
+        width: 100%;
+    }
+
     .hero-title {
-        font-size: 2.5rem;
+        font-size: 2.6rem;
+        text-align: center;
     }
 
     .hero-subtitle {
         font-size: 1.2rem;
+        text-align: center;
+        margin-bottom: 1.8rem;
+    }
+
+    .hero-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero-visual {
+        height: 320px;
+    }
+
+    .menu {
+        padding: 4rem 1.2rem;
     }
 
     .about {
         flex-direction: column;
+        padding: 3rem 1.2rem;
     }
 
     .about-features {
         grid-template-columns: 1fr;
+    }
+
+    .contact {
+        padding: 4rem 1.2rem;
     }
 
     .contact-container {
@@ -724,20 +793,124 @@ body {
         grid-template-columns: 1fr;
     }
 
-    .nav-links {
-        gap: 1rem;
-        font-size: 0.9rem;
-    }
-
     .menu-card {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
     }
 
     .card-visual {
-        width: 150px;
-        height: 150px;
-        border-radius: 8px 0 0 8px;
+        width: 100%;
+        height: 220px;
+        border-radius: 12px 12px 0 0;
+    }
+
+    .menu-card h4,
+    .menu-card .description,
+    .menu-card .price,
+    .order-btn {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+    .order-btn {
+        width: 100%;
+        max-width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 540px) {
+    .nav-container {
+        padding: 0 1rem;
+    }
+
+    .nav-links {
+        gap: 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    .hero {
+        padding: 2rem 1rem;
+        gap: 2rem;
+    }
+
+    .hero-title {
+        font-size: 2.2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .hero-visual {
+        height: 280px;
+    }
+
+    .menu {
+        padding: 3rem 1rem;
+    }
+
+    .section-title {
+        font-size: 2.4rem;
+    }
+
+    .section-subtitle {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .category-title {
+        font-size: 1.75rem;
+    }
+
+    .card-visual {
+        height: 180px;
+    }
+
+    .menu-card h4 {
+        font-size: 1.35rem;
+    }
+
+    .menu-card .price {
+        font-size: 1.3rem;
+    }
+
+    .order-btn {
+        width: 100%;
+    }
+
+    .about {
+        padding: 2.5rem 1rem;
+    }
+
+    .about-text {
+        font-size: 1rem;
+    }
+
+    .about-visual,
+    .hero-visual {
+        border-radius: 12px;
+    }
+
+    .about-icon,
+    .food-icon {
+        font-size: 5rem;
+    }
+
+    .contact {
+        padding: 3rem 1rem;
+    }
+
+    .info-card,
+    .submit-btn,
+    .contact-form input,
+    .contact-form textarea {
+        width: 100%;
+    }
+
+    .footer {
+        padding: 1.5rem 1rem;
     }
 }
 
