@@ -1,31 +1,11 @@
-/*
- Beginner-friendly CSS guide (short)
 
- - CSS file structure: selectors { property: value; }
-     Example: .btn { color: red; padding: 10px; }
- - Selectors used here: element (e.g., body), class (.nav), and universal (*)
- - The box model: content -> padding -> border -> margin
- - CSS variables: defined in :root and used with var(--name)
-     Example: color: var(--primary-color);
- - Comments: open with "slash-star" and close with "star-slash" — use them to explain code.
-
- Quick example for beginners:
- .example { background: lightblue; padding: 8px; }
-
- General reset: helps make spacing consistent across browsers.
-*/
-
-/* Reset common defaults so layouts behave predictably */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box; /* keeps width/height easy to reason about */
 }
 
-/*
- Define theme variables (colors, speeds). Variables make updates easy.
- Use them with var(--variable-name).
- */
+
 :root {
     --primary-color: #D4AF37;     /* main accent color */
     --secondary-color: #2C1810;   /* dark complementary color */
@@ -35,10 +15,7 @@
     --transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-/*
- The body selector styles the whole page. Keep fonts and base color here.
- Learners: changing these values affects the whole site.
- */
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: var(--dark-bg);
